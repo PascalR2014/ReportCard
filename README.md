@@ -1,2 +1,2 @@
-# ReportCard-
+# ReportCard
 ReportCard a Udacity project
