@@ -1,175 +1,167 @@
 package com.example.android.reportcard;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+public class ReportCard {
+    public class Administration {
+        //Constructor
+        public Administration(String schoolName, int year, int term) {
+        this.schoolName = schoolName;
+        this.year = year;
+        this.term = term;
+        }
+        //Private constant
+        private String schoolName;
+        private int year;
+        private int term;
 
-public class ReportCardActivity extends AppCompatActivity {
+        // Getter and setter method encapsulation
+        public void setSchoolName(String newSchoolName) {
+        schoolName = newSchoolName;
+        }
+        public String getSchoolName() {
+        return schoolName;
+        }
+        public void setYear(int newYear) {
+        year = newYear;
+        }
+        public int getYear() {
+        return year;
+        }
+        public void setTerm(int newTerm) {
+            term = newTerm;
+        }
+        public int getTerm() {
+        return term;
+        }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_report_card);
+        // toString() method will show on the screen the informations of this app
+        @Override
+        public String toString() {
+        return "School year:" + this.year + "\nTerm : " + this.term + "\nSchool name:" + this.schoolName;
+        }
+    } 
 
+    public class GradeOfStudent {
+        private String studentName;
+        private int sectionClass;
+        private int gradeOfFrench;
+        private int gradeOfEnglish;
+        private int gradeOfLatin;
+        private int gradeOfLiterature;
+        private int gradeOfScience;
+        private int gradeOfMaths;
+        private int gradeOfSports;
+        private int gradeOfDiscipline;
 
-        public class ReportCard {
-            public class Administration {
-                //Constructor
-                public Administration(String schoolName, int year, int term) {
-                    this.schoolName = schoolName;
-                    this.year = year;
-                    this.term = term;
-                }
+        // Getter and setter method encapsulation
+        // Student name
+        public void setStudentName(String newStudentName) {
+        studentName = newStudentName;
+        }
 
-                private String schoolName;
-                private int year;
-                private int term;
+        public String getStudentName() {
+        return studentName;
+        }
 
-                // Getter and setter method encapsulation
-                public void setYear(int newYear) {
-                    year = newYear;
-                }
-                public int getYear() {
-                    return year;
-                }
-                public void setTerm(int newTerm) {
-                    term = newTerm;
-                }
-                public int getTerm() {
-                    return term;
-                }
+        //For section class
+        public void setSectionClass(int newSectionClass) {
+        sectionClass = newSectionClass;
+        }
 
-                // toString() method will show on the screen the informations of this app
-                @Override
-                public String toString() {
-                    return "School year:" + this.year + "\nTerm : " + this.term + "\nSchool name:" + this.schoolName;
-                }
-            } // End Administration class
+        public int getSectionClass() {
+        return sectionClass;
+        }
 
-            public class GradeOfStudent {
-                private String studentName;
-                private int sectionClass;
-                private int gradeOfFrench;
-                private int gradeOfEnglish;
-                private int gradeOfLatin;
-                private int gradeOfLiterature;
-                private int gradeOfScience;
-                private int gradeOfMaths;
-                private int gradeOfSports;
-                private int gradeOfDiscipline;
+        //French grade
+        public void setGradeOfFrench(int NewGradeOfFrench) {
+        gradeOfFrench = NewGradeOfFrench;
+        }
 
-                // Getter and setter method encapsulation
-                // Student name
-                public void setStudentName(String newStudentName) {
-                    studentName = newStudentName;
-                }
+        public int getGradeOfFrench() {
+        return gradeOfFrench;
+        }
 
-                public String getStudentName() {
-                    return studentName;
-                }
+        //English grade
+        public void setGradeOfEnglish(int NewGradeOfEnglish) {
+        gradeOfEnglish = NewGradeOfEnglish;
+        }
 
-                //For section class
-                public void setSectionClass(int newSectionClass) {
-                    sectionClass = newSectionClass;
-                }
+        public int getGradeOfEnglish() {
+        return gradeOfEnglish;
+        }
 
-                public int getSectionClass() {
-                    return sectionClass;
-                }
+        //Latin grade
+        public void setGradeOfLatin(int NewGradeOfLatin) {
+        gradeOfLatin = NewGradeOfLatin;
+        }
 
-                //French grade
-                public void setGradeOfFrench(int NewGradeOfFrench) {
-                    gradeOfFrench = NewGradeOfFrench;
-                }
+        public int getGradeOfLatin() {
+            return gradeOfLatin;
+        }
 
-                public int getGradeOfFrench() {
-                    return gradeOfFrench;
-                }
+        //Literature grade
+        public void setGradeOfLiterature(int NewGradeOfLiterature) {
+        gradeOfLiterature = NewGradeOfLiterature;
+        }
 
-                //English grade
-                public void setGradeOfEnglish(int NewGradeOfEnglish) {
-                    gradeOfEnglish = NewGradeOfEnglish;
-                }
+        public int getGradeOfLiterature() {
+        return gradeOfLiterature;
+        }
 
-                public int getGradeOfEnglish() {
-                    return gradeOfEnglish;
-                }
+        //Science grade
+        public void setGradeOfScience(int NewGradeOfScience) {
+        gradeOfScience = NewGradeOfScience;
+        }
 
-                //Latin grade
-                public void setGradeOfLatin(int NewGradeOfLatin) {
-                    gradeOfLatin = NewGradeOfLatin;
-                }
+        public int getGradeOfScience() {
+            return gradeOfScience;
+        }
 
-                public int getGradeOfLatin() {
-                    return gradeOfLatin;
-                }
+        //Maths grade
+        public void setGradeOfMaths(int NewGradeOfMaths) {
+            gradeOfMaths = NewGradeOfMaths;
+        }
 
-                //Literature grade
-                public void setGradeOfLiterature(int NewGradeOfLiterature) {
-                    gradeOfLiterature = NewGradeOfLiterature;
-                }
+        public int getGradeOfMaths() {
+        return gradeOfMaths;
+        }
 
-                public int getGradeOfLiterature() {
-                    return gradeOfLiterature;
-                }
+        //Sports grade
+        public void setGradeOfSports(int NewGradeOfSports) {
+        gradeOfSports = NewGradeOfSports;
+        }
 
-                //Science grade
-                public void setGradeOfScience(int NewGradeOfScience) {
-                    gradeOfScience = NewGradeOfScience;
-                }
+        public int getGradeOfSports() {
+        return gradeOfSports;
+        }
 
-                public int getGradeOfScience() {
-                    return gradeOfScience;
-                }
+        //Discipline grade
+        public void setGradeOfDiscipline(int NewGradeOfDiscipline) {
+        gradeOfDiscipline = NewGradeOfDiscipline;
+        }
 
-                //Maths grade
-                public void setGradeOfMaths(int NewGradeOfMaths) {
-                    gradeOfMaths = NewGradeOfMaths;
-                }
+        public int getGradeOfDiscipline() {
+        return gradeOfDiscipline;
+        }
 
-                public int getGradeOfMaths() {
-                    return gradeOfMaths;
-                }
+        //Constructor
+        public GradeOfStudent(String studentName, int sectionClass, int gradeOfFrench, int gradeOfEnglish, int gradeOfLatin, int gradeOfLiterature, int gradeOfScience, int gradeOfMaths, int gradeOfSports, int gradeOfDiscipline) {
+        this.studentName = studentName;
+        this.sectionClass = sectionClass;
+        this.gradeOfFrench = gradeOfFrench;
+        this.gradeOfEnglish = gradeOfEnglish;
+        this.gradeOfLatin = gradeOfLatin;
+        this.gradeOfLiterature = gradeOfLiterature;
+        this.gradeOfScience = gradeOfScience;
+        this.gradeOfMaths = gradeOfMaths;
+        this.gradeOfSports = gradeOfSports;
+        this.gradeOfDiscipline = gradeOfDiscipline;
+        }
 
-                //Sports grade
-                public void setGradeOfSports(int NewGradeOfSports) {
-                    gradeOfSports = NewGradeOfSports;
-                }
+        // toString() method will show on the screen the informations of this app
+        @Override
+        public String toString() {
+        return "Name of the student:" + this.studentName + "\nClass : " + this.sectionClass + "Grading system goes 10 to 20 points, total average calculate at each term of the current school year, ..." + "\nFrench note:" + this.gradeOfFrench + "\nEnglish note:" + this.gradeOfEnglish + "etc." + "\nNote of the discipline of your child" + this.gradeOfDiscipline;
+        }
+    } 
+} // End ReportCard
 
-                public int getGradeOfSports() {
-                    return gradeOfSports;
-                }
-
-                //Discipline grade
-                public void setGradeOfDiscipline(int NewGradeOfDiscipline) {
-                    gradeOfDiscipline = NewGradeOfDiscipline;
-                }
-
-                public int getGradeOfDiscipline() {
-                    return gradeOfDiscipline;
-                }
-
-                //Constructor
-                public GradeOfStudent(String studentName, int sectionClass, int gradeOfFrench, int gradeOfEnglish, int gradeOfLatin, int gradeOfLiterature, int gradeOfScience, int gradeOfMaths, int gradeOfSports, int gradeOfDiscipline) {
-                    this.studentName = studentName;
-                    this.sectionClass = sectionClass;
-                    this.gradeOfFrench = gradeOfFrench;
-                    this.gradeOfEnglish = gradeOfEnglish;
-                    this.gradeOfLatin = gradeOfLatin;
-                    this.gradeOfLiterature = gradeOfLiterature;
-                    this.gradeOfScience = gradeOfScience;
-                    this.gradeOfMaths = gradeOfMaths;
-                    this.gradeOfSports = gradeOfSports;
-                    this.gradeOfDiscipline = gradeOfDiscipline;
-                }
-
-                // toString() method will show on the screen the informations of this app
-                @Override
-                public String toString() {
-                    return "Name of the student:" + this.studentName + "\nClass : " + this.sectionClass + "Grading system goes 10 to 20 points, total average calculate at each term of the current school year, ..." +
-                            "\nFrench note:" + this.gradeOfFrench + "\nEnglish note:" + this.gradeOfEnglish + "etc." + "\nNote of the discipline of your child" + this.gradeOfDiscipline;
-                }
-            } //End GradeOfStudent
-
-        } // End ReportCard
-    }
-}
